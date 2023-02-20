@@ -73,7 +73,15 @@ namespace ShapeTracker.Tests
     {
       Triangle notATriangle = new Triangle(3, 4, 88);
       string triType = notATriangle.CheckType();
-      Assert.AreEqual("Not a triangle.", triType);
+      Assert.AreEqual("Not a triangle", triType);
+    }
+
+    [TestMethod]
+    public void CheckType_DeterminesWhenScalene_String()
+    {
+      Triangle scaleneTri = new Triangle(3, 4, 5);
+      string triType = scaleneTri.CheckType();
+      Assert.AreEqual("Scalene triangle", triType);
     }
   }
 }
